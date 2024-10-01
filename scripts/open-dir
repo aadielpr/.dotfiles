@@ -1,0 +1,17 @@
+#!/bin/bash
+
+openDir() {
+    local dir
+    dir=$(fd . ~/.config ~/gbmnx ~/.local --type d --max-depth 2 \
+        --exclude node_modules --exclude .git --exclude dist --exclude build \
+        | fzf)
+
+    if [ -n "$dir" ]; then
+        cd "$dir" || return 1
+        zle reset-prompt
+    fi
+}
+
+zle -N openDir-widget openDir
+bindkey '^p' openDir-widget
+
