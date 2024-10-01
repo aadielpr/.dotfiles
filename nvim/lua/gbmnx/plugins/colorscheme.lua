@@ -5,6 +5,37 @@ return {
 	config = function()
 		local nordic = require("nordic")
 		nordic.setup({
+			on_highlight = function(highlights, palette)
+				highlights.TelescopePromptTitle = {
+					fg = palette.black2,
+					bg = palette.black2,
+				}
+
+				highlights.TelescopePromptBorder = {
+					bg = palette.black2,
+					fg = palette.black2,
+				}
+
+				highlights.TelescopePreviewTitle = {
+					fg = palette.black1,
+					bg = palette.black1,
+				}
+
+				highlights.TelescopeResultsTitle = {
+					fg = palette.black1,
+					bg = palette.black1,
+				}
+
+				highlights.TelescopeResultsBorder = {
+					fg = palette.black1,
+					bg = palette.black1,
+				}
+
+				highlights.TelescopePreviewBorder = {
+					fg = palette.black1,
+					bg = palette.black1,
+				}
+			end,
 			-- Enable bold keywords.
 			bold_keywords = true,
 			-- Enable italic comments.
