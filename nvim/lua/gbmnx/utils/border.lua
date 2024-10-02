@@ -6,3 +6,4 @@ M.border_chars_outer_thick = { "▛", "▀", "▜", "▐", "▟", "▄", "▙", 
 M.border_chars_none = { " ", " ", " ", " ", " ", " ", " ", " " }
 
 return M
+
